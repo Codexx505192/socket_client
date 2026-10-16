@@ -17,7 +17,7 @@ const Chat = () => {
   const [message, setMessage] = useState("")
   const [isOpen, setIsOpen] = useState(false)
 
-  // Реф для отслеживания кликов вне блока эмодзи
+  
   const emojiRef = useRef(null)
 
   useEffect(() => {
@@ -31,13 +31,13 @@ const Chat = () => {
       setState((_state) => [..._state, data])
     })
     
-    // Исправлено: слушаем 'joinRoom', который приходит с сервера
+    
     socket.on('joinRoom', ({ data: { users } }) => {
       setUsers(users)
     })
   }, [])
 
-  // Закрытие панели эмодзи по клику вне элемента
+  
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (emojiRef.current && !emojiRef.current.contains(e.target)) {
@@ -75,10 +75,11 @@ const Chat = () => {
   }
 
   return (
+    <section className={styles.chatBack}>
     <div className={styles.container}>
       <div className={styles.room_container}>
         
-        {/* Шапка комнаты */}
+     
         <header className={styles.room_header}>
           <div className={styles.room_title}>{params.room}</div>
           <div className={styles.room_status}>{users.length} users in this room</div>
@@ -88,14 +89,14 @@ const Chat = () => {
           </button>
         </header>
 
-        {/* Список сообщений */}
+       
         <main className={styles.room_content}>
           <div className={styles.messages_list}>
             <Messages messages={state} name={params.name} />
           </div>
         </main>
 
-        {/* Форма отправки */}
+        
         <form onSubmit={handleSubmit}>
           <footer className={styles.room_footer}>
             <div className={styles.chat_form}>
@@ -133,6 +134,7 @@ const Chat = () => {
 
       </div>
     </div>
+    </section>
   )
 }
 

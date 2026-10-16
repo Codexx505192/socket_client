@@ -20,7 +20,7 @@ const Messages = ({ messages, name }) => {
                     {userName || 'Unknown'}
                 </span>
 
-                <div className={styles.r}>
+                <div>
                  <span className={styles.text}>{message}</span>
                 </div>
                 </div>

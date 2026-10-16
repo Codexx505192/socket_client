@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-.user{
-    color: aliceblue;
-    padding: 0 0 20px;
-}
 
 .text{
     padding: 5px;
@@ -68,10 +64,8 @@
 .user {
   font-size: 12px;
   color: #a8abb2;
-  margin-bottom: 2px;
+  padding: 0 0 10px;
 }
 
-.text {
-  word-break: break-word;
-}
+
 /* mess */
