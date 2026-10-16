@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import styles from '../styles/Chat.module.css'
 import Messages from './Messages'
 
-const socket = io.connect('http://localhost:5000')
+const socket = io.connect('https://online-chat-gzg8.onrender.com')
 
 const Chat = () => {
   const { search } = useLocation()
