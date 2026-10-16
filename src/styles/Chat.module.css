@@ -216,6 +216,14 @@
     }
 
     .rm {
-    right: 40px; /* Сдвигаем, чтобы не вылезал за экран */
+    right: 40px;
   }
+
+  .room_container{
+    width: 366px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
 }
