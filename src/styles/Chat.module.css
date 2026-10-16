@@ -173,7 +173,10 @@
       
     }
 
-   
+    .room_container{
+    width: 1000px;
+    height: 570px;
+   }
 }
 
 
@@ -205,8 +208,9 @@
 
 .room_container {
     width: 449px;
-    height: 600px;
+    height: 580px;
 }
+
 }
 
 
@@ -219,6 +223,15 @@
     width: 500px;
     height: 600px;
     }
+
+
+    .room_container{
+    width: 440px;
+    height: 580px;
+    }
+
+
+    
 }
 
 @media (max-width: 375px) {
